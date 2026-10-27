@@ -1,0 +1,48 @@
+/* recruiter view */
+.recruiter-only {
+  display:none
+}
+.recruiter .recruiter-only {
+  display:block
+}
+.recruiter .hero-scene,.recruiter .viewfinder,.recruiter .flightline,.recruiter .hero-vertical {
+  opacity:.18
+}
+.recruiter .hero {
+  height:auto;
+  min-height:600px
+}
+.recruiter .hero-copy {
+  padding:70px 0
+}
+.recruiter .hero-side {
+  display:none
+}
+.recruiter .hero-inner {
+  grid-template-columns:1fr
+}
+.recruiter .hero-name {
+  font-size:clamp(75px,10vw,140px)
+}
+.recruiter .warroom {
+  display:block
+}
+.recruiter .mapboard {
+  display:none
+}
+.recruiter .missionlist {
+  grid-template-columns:repeat(3,1fr)
+}
+.recruiter .btn.recruiter-active {
+  background:var(--amber);
+  color:#111
+}
+.recruiter-banner {
+  padding:12px 4vw;
+  background:var(--amber);
+  color:#172016;
+  font:800 11px 'Courier New',monospace;
+  text-align:center;
+  letter-spacing:.13em;
+  text-transform:uppercase
+}

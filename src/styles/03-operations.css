@@ -1,0 +1,346 @@
+/* MISSION PLANNING */
+.missions {
+  background:linear-gradient(180deg,#0c120d,#131a12 74%,#0c110d)
+}
+.section-intro {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:40px
+}
+.section-intro .count {
+  border-left:2px solid var(--amber);
+  padding:6px 0 6px 20px;
+  text-align:right;
+  color:#b7c2b1;
+  font:11px 'Courier New',monospace
+}
+.section-intro .count strong {
+  display:block;
+  color:var(--amber);
+  font:900 53px Impact,Arial,sans-serif
+}
+.warroom {
+  display:grid;
+  grid-template-columns:minmax(360px,.88fr) minmax(0,1.12fr);
+  gap:24px;
+  margin-top:45px;
+  align-items:start;
+  position:relative;
+  z-index:2
+}
+.mapboard {
+  position:sticky;
+  top:110px;
+  min-height:610px;
+  background:#1f2b21;
+  overflow:hidden;
+  border:1px solid #718366;
+  box-shadow:0 22px 50px #060a07aa
+}
+.mapboard:after {
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  box-shadow:inset 0 0 90px #070c08;
+  z-index:2
+}
+.map-top {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  padding:17px 20px;
+  display:flex;
+  justify-content:space-between;
+  z-index:6;
+  background:linear-gradient(#101c16e9,transparent);
+  font:10px 'Courier New',monospace;
+  letter-spacing:.14em;
+  color:#f4e8b6
+}
+.map-top b {
+  color:var(--amber)
+}
+.map-art {
+  height:610px;
+  width:100%;
+  position:relative;
+  overflow:hidden
+}
+.map-art svg {
+  width:100%;
+  height:100%;
+  display:block;
+  filter:saturate(.7) contrast(1.08)
+}
+.map-art .gridlay {
+  position:absolute;
+  inset:0;
+  background:repeating-linear-gradient(90deg,transparent 0 15.9%,#b9c99b17 16%,transparent 16.15%),repeating-linear-gradient(0deg,transparent 0 15.9%,#b9c99b18 16%,transparent 16.15%);
+  pointer-events:none
+}
+.flightline {
+  position:absolute;
+  left:10%;
+  right:7%;
+  top:46%;
+  transform:rotate(-21deg);
+  border-top:2px dashed #e6c96ac4;
+  z-index:4;
+  filter:drop-shadow(0 0 2px black)
+}
+.flightline:before {
+  content:"✈";
+  position:absolute;
+  left:42%;
+  top:-20px;
+  font-size:26px;
+  color:#f6df93;
+  animation:fly 12s ease-in-out infinite alternate
+}
+@keyframes fly {
+  to {
+    left:72%
+  }
+}
+.mapmarker {
+  position:absolute;
+  z-index:5;
+  width:36px;
+  height:36px;
+  display:grid;
+  place-items:center;
+  border:1px solid #f6d373;
+  background:#131d13;
+  border-radius:50%;
+  color:#ffd85c;
+  font:900 13px 'Courier New',monospace;
+  box-shadow:0 0 0 5px rgba(0,0,0,.26),0 0 20px rgba(255,202,54,.17);
+  transform:translate(-50%,-50%);
+  transition:transform .2s,background .2s
+}
+.mapmarker:before {
+  content:"";
+  position:absolute;
+  inset:-9px;
+  border:1px dashed #d9c06380;
+  border-radius:50%;
+  animation:spin 18s linear infinite
+}
+@keyframes spin {
+  to {
+    transform:rotate(360deg)
+  }
+}
+.mapmarker:hover,.mapmarker.selected {
+  background:var(--amber);
+  color:#121712;
+  transform:translate(-50%,-50%) scale(1.27);
+  z-index:10
+}
+.mapmarker.selected:after {
+  content:"DROP ZONE";
+  position:absolute;
+  top:-34px;
+  left:50%;
+  transform:translateX(-50%);
+  white-space:nowrap;
+  background:var(--amber);
+  color:#111;
+  padding:4px 6px;
+  font:800 9px 'Courier New',monospace
+}
+.mapbot {
+  position:absolute;
+  z-index:6;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:14px 19px;
+  background:linear-gradient(0deg,#101a14,transparent);
+  display:flex;
+  justify-content:space-between;
+  color:#ebdea9;
+  font:9px 'Courier New',monospace;
+  letter-spacing:.1em
+}
+.maplegend {
+  position:absolute;
+  z-index:5;
+  right:16px;
+  bottom:50px;
+  background:#141d15dd;
+  padding:9px 13px;
+  font:10px 'Courier New',monospace;
+  color:#f4e8b6;
+  border:1px solid #728568
+}
+.maplegend i {
+  display:inline-block;
+  width:9px;
+  height:9px;
+  background:var(--amber);
+  border-radius:50%;
+  margin-right:5px
+}
+.missiondesk {
+  min-width:0
+}
+.filters {
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-bottom:15px
+}
+.filter {
+  background:#1b261b;
+  border:1px solid #4c5c4a;
+  color:#b9c5b4;
+  font:700 10px 'Courier New',monospace;
+  letter-spacing:.065em;
+  padding:10px 12px;
+  text-transform:uppercase;
+  transition:all .2s
+}
+.filter:hover,.filter.active {
+  background:var(--amber);
+  border-color:var(--amber);
+  color:#101510
+}
+.searchrow {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin:14px 0 16px
+}
+.searchwrap {
+  flex:1;
+  position:relative
+}
+.searchwrap span {
+  position:absolute;
+  left:14px;
+  top:13px;
+  color:var(--amber);
+  font-size:18px
+}
+.searchwrap input {
+  width:100%;
+  background:#0b110e;
+  border:1px solid #4f604d;
+  color:white;
+  padding:14px 20px 14px 43px;
+  outline:none;
+  font:12px 'Courier New',monospace
+}
+.searchwrap input:focus {
+  border-color:var(--amber)
+}
+.searchrow small {
+  font:11px 'Courier New',monospace;
+  color:#b2c4ac;
+  white-space:nowrap
+}
+.missionlist {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px
+}
+.mission {
+  position:relative;
+  background:#172119;
+  border:1px solid #4e614e;
+  min-height:240px;
+  padding:24px 19px 17px;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  transition:border-color .2s,transform .2s,background .2s;
+  cursor:pointer
+}
+.mission:hover,.mission.selected {
+  border-color:var(--amber);
+  background:#263022;
+  transform:translateY(-3px)
+}
+.mission:before {
+  content:"";
+  position:absolute;
+  right:-36px;
+  top:-32px;
+  width:100px;
+  height:100px;
+  transform:rotate(45deg);
+  border:1px solid #7e906258
+}
+.mission-number {
+  font:700 10px 'Courier New',monospace;
+  color:var(--amber);
+  letter-spacing:.1em
+}
+.mission .m-icon {
+  font-size:30px;
+  margin:17px 0 11px;
+  line-height:1
+}
+.mission h3 {
+  font:900 22px Impact,'Arial Narrow',Arial,sans-serif;
+  letter-spacing:.04em;
+  line-height:1.05;
+  text-transform:uppercase;
+  margin:0 0 8px
+}
+.mission p {
+  font-size:12px;
+  color:#aeb9ac;
+  margin:0 0 12px;
+  line-height:1.55
+}
+.mission .bottom {
+  margin-top:auto;
+  padding-top:10px;
+  border-top:1px solid #405040;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px
+}
+.m-status {
+  color:#c9d8c0;
+  font:9px 'Courier New',monospace;
+  text-transform:uppercase;
+  letter-spacing:.04em
+}
+.mission .open {
+  color:var(--amber);
+  font:800 10px 'Courier New',monospace
+}
+.mission-empty {
+  padding:30px;
+  color:#b8c9b4;
+  border:1px dashed #587057
+}
+.deploy-strip {
+  margin-top:16px;
+  border:1px solid #54664e;
+  background:#0b110d;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  padding:17px
+}
+.deploy-strip .signal {
+  font:800 27px Impact,Arial,sans-serif;
+  color:var(--amber)
+}
+.deploy-strip p {
+  color:#b5c1b3;
+  font:11px 'Courier New',monospace;
+  margin:0;
+  line-height:1.7
+}
+.deploy-strip strong {
+  color:var(--white)
+}

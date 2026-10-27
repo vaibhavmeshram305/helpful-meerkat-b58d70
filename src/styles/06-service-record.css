@@ -1,0 +1,132 @@
+/* record */
+.record {
+  background:#0a0f0b
+}
+.record-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-top:48px
+}
+.timeline {
+  border-left:1px solid #758364;
+  margin-left:13px
+}
+.timeunit {
+  position:relative;
+  padding:0 0 34px 31px
+}
+.timeunit:before {
+  content:"";
+  position:absolute;
+  width:13px;
+  height:13px;
+  background:#111811;
+  border:2px solid var(--amber);
+  transform:rotate(45deg);
+  top:4px;
+  left:-8px
+}
+.timeunit small {
+  font:10px 'Courier New',monospace;
+  color:var(--amber);
+  text-transform:uppercase;
+  letter-spacing:.14em
+}
+.timeunit h3 {
+  font:900 29px Impact,Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.035em;
+  margin:9px 0
+}
+.timeunit p {
+  margin:0;
+  color:#bac5b5;
+  font-size:14px
+}
+.introcard {
+  background:linear-gradient(145deg,#222f24,#111c15);
+  border:1px solid #7a886b;
+  padding:30px;
+  position:relative;
+  align-self:start;
+  box-shadow:12px 12px 0 #263124
+}
+.introcard .label {
+  font:10px 'Courier New',monospace;
+  color:var(--amber);
+  letter-spacing:.13em
+}
+.introcard h3 {
+  font:900 41px Impact,Arial,sans-serif;
+  text-transform:uppercase;
+  margin:12px 0 20px
+}
+.introcard blockquote {
+  border-left:4px solid var(--amber);
+  padding:0 0 0 20px;
+  margin:0 0 27px;
+  line-height:1.85;
+  color:#d2d9cc;
+  font-size:14px
+}
+.introcard .cta-row {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap
+}
+.tiny {
+  color:#9fae9c;
+  font:10px 'Courier New',monospace;
+  letter-spacing:.04em;
+  line-height:1.7
+}
+.exit {
+  background:radial-gradient(ellipse at 50% 30%,#323d27 0%,#111711 65%);
+  text-align:center;
+  padding:95px 30px;
+  border-top:1px solid #536148;
+  position:relative;
+  overflow:hidden
+}
+.exit:before {
+  content:"EXTRACTION";
+  position:absolute;
+  font:900 clamp(100px,20vw,300px) Impact,Arial,sans-serif;
+  left:50%;
+  top:20px;
+  transform:translateX(-50%);
+  opacity:.035;
+  white-space:nowrap;
+  pointer-events:none
+}
+.exit h2 {
+  font:900 clamp(54px,8vw,112px) Impact,Arial,sans-serif;
+  text-transform:uppercase;
+  margin:15px 0
+}
+.exit p {
+  max-width:660px;
+  margin:0 auto 30px;
+  color:#b5c0b1
+}
+.exit .cta-row {
+  display:flex;
+  justify-content:center;
+  gap:13px;
+  flex-wrap:wrap
+}
+.footer {
+  padding:25px 4vw;
+  background:#0c100d;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  color:#9fac9d;
+  font:10px 'Courier New',monospace;
+  letter-spacing:.08em;
+  text-transform:uppercase
+}
+.footer b {
+  color:var(--amber)
+}

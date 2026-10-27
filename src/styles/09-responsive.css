@@ -1,0 +1,431 @@
+@media(max-width:1250px) {
+  .navlinks {
+    gap:15px
+  }
+  .navlinks a {
+    font-size:10px
+  }
+  .brandname {
+    font-size:16px
+  }
+  .privacy {
+    display:none
+  }
+  .hero-inner {
+    grid-template-columns:1fr .55fr
+  }
+  .warroom {
+    grid-template-columns:.83fr 1.17fr
+  }
+  .missionlist {
+    grid-template-columns:1fr
+  }
+  .mission {
+    min-height:180px
+  }
+  .mission .m-icon {
+    margin:9px 0
+  }
+  .mission .bottom {
+    margin-top:14px
+  }
+}
+@media(max-width:1020px) {
+  .topline span:nth-child(2) {
+    display:none
+  }
+  .navlinks {
+    display:none
+  }
+  .hamburger {
+    display:grid
+  }
+  .navtools {
+    margin-left:auto
+  }
+  .mobilemenu.show {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:0;
+    background:#121b14;
+    border-top:1px solid #445444
+  }
+  .mobilemenu a {
+    padding:18px 24px;
+    border-bottom:1px solid #334632;
+    color:var(--white);
+    font:700 12px 'Courier New',monospace
+  }
+  .hero-inner {
+    grid-template-columns:1fr
+  }
+  .hero-side {
+    display:none
+  }
+  .hero:before {
+    background:linear-gradient(90deg,rgba(9,14,11,.98),rgba(9,14,11,.7) 56%,rgba(9,14,11,.18))
+  }
+  .hero .hero-copy {
+    max-width:710px
+  }
+  .hero-name {
+    font-size:clamp(80px,13vw,150px)
+  }
+  .warroom {
+    grid-template-columns:1fr
+  }
+  .mapboard {
+    position:relative;
+    top:0;
+    min-height:430px
+  }
+  .map-art {
+    height:480px
+  }
+  .missionlist {
+    grid-template-columns:repeat(3,1fr)
+  }
+  .mission {
+    min-height:245px
+  }
+  .equipment {
+    grid-template-columns:1fr
+  }
+  .equipslots {
+    grid-template-columns:repeat(4,1fr)
+  }
+  .itemdetail {
+    display:grid;
+    grid-template-columns:1fr 1fr
+  }
+  .item-head {
+    grid-column:1/-1
+  }
+  .item-display {
+    min-height:230px
+  }
+  .itemtext {
+    border-top:0;
+    border-left:1px solid #596754;
+    align-self:stretch;
+    display:flex;
+    justify-content:center;
+    flex-direction:column
+  }
+}
+@media(max-width:720px) {
+  .section {
+    padding:75px 20px
+  }
+  .topline {
+    padding:0 20px;
+    justify-content:center;
+    font-size:9px
+  }
+  .topline span:nth-child(3) {
+    display:none
+  }
+  .nav {
+    min-height:66px;
+    padding:0 20px;
+    gap:12px
+  }
+  .brandmark {
+    width:36px;
+    height:36px
+  }
+  .brandname {
+    font-size:15px
+  }
+  .brandname small {
+    font-size:8px
+  }
+  .navtools .btn {
+    display:none
+  }
+  .hero {
+    min-height:740px;
+    height:calc(95svh - 92px)
+  }
+  .hero-inner {
+    padding:0 23px
+  }
+  .hero-copy {
+    padding:16px 0 50px
+  }
+  .hero .missionlabel {
+    font-size:8px;
+    gap:7px;
+    letter-spacing:.06em
+  }
+  .hero .eyebrow {
+    font-size:10px
+  }
+  .hero-name {
+    font-size:clamp(70px,15vw,116px)
+  }
+  .hero-name .outline {
+    -webkit-text-stroke:1.5px white
+  }
+  .hero-role p {
+    font-size:19px
+  }
+  .hero-desc {
+    font-size:13px;
+    line-height:1.7
+  }
+  .hero-actions .btn {
+    font-size:10px;
+    min-height:47px;
+    padding:8px 15px
+  }
+  .hero-meta {
+    font-size:9px;
+    gap:7px
+  }
+  .hero-meta span {
+    padding-right:8px
+  }
+  .hero-vertical {
+    display:none
+  }
+  .hero-coordinate {
+    left:23px;
+    font-size:9px;
+    bottom:17px
+  }
+  .scrollcue {
+    display:none
+  }
+  .status-ribbon {
+    grid-template-columns:1fr 1fr
+  }
+  .status-ribbon .stat {
+    padding:17px 22px
+  }
+  .stat strong {
+    font-size:18px
+  }
+  .sectionhead h2 {
+    font-size:clamp(48px,12vw,85px)
+  }
+  .sectionhead p {
+    font-size:14px
+  }
+  .section-intro .count {
+    display:none
+  }
+  .warroom {
+    margin-top:30px
+  }
+  .mapboard {
+    min-height:340px
+  }
+  .map-art {
+    height:390px
+  }
+  .missionlist {
+    grid-template-columns:1fr 1fr
+  }
+  .mission {
+    min-height:216px;
+    padding:17px 13px 12px
+  }
+  .mission h3 {
+    font-size:19px
+  }
+  .mission p {
+    font-size:11px
+  }
+  .mission .m-icon {
+    font-size:26px;
+    margin:10px 0
+  }
+  .filters {
+    gap:5px
+  }
+  .filter {
+    font-size:9px;
+    padding:9px 8px
+  }
+  .searchrow {
+    flex-wrap:wrap
+  }
+  .searchrow small {
+    font-size:10px
+  }
+  .equipslots {
+    grid-template-columns:repeat(3,1fr)
+  }
+  .slot {
+    min-height:118px
+  }
+  .equipment-left {
+    padding:15px
+  }
+  .itemdetail {
+    display:flex
+  }
+  .item-display {
+    min-height:200px
+  }
+  .itemtext {
+    border-top:1px solid #596754;
+    border-left:0
+  }
+  .intel-grid,.record-grid {
+    grid-template-columns:1fr;
+    gap:20px
+  }
+  .intel-feature {
+    min-height:510px;
+    padding:25px
+  }
+  .intel-feature h3 {
+    font-size:48px
+  }
+  .intel-art {
+    width:170px;
+    right:10px
+  }
+  .crates {
+    grid-template-columns:1fr 1fr
+  }
+  .crate {
+    min-height:202px;
+    padding:17px 13px
+  }
+  .reportbar h3 {
+    font-size:27px
+  }
+  .reportbar small {
+    display:none
+  }
+  .introcard {
+    padding:22px
+  }
+  .introcard h3 {
+    font-size:33px
+  }
+  .exit h2 {
+    font-size:65px
+  }
+  .footer {
+    padding:22px;
+    display:block;
+    line-height:2
+  }
+  .modal-head {
+    padding:22px
+  }
+  .modal-body {
+    padding:20px
+  }
+  .modal-head h2 {
+    font-size:36px
+  }
+}
+@media(max-width:420px) {
+  .hero-name {
+    font-size:16vw
+  }
+  .missionlist {
+    grid-template-columns:1fr
+  }
+  .mission {
+    min-height:165px
+  }
+  .mission .m-icon {
+    float:left;
+    margin:6px 14px 0 0
+  }
+  .mission .bottom {
+    margin-top:10px
+  }
+  .brandname {
+    font-size:13px
+  }
+  .crates {
+    grid-template-columns:1fr 1fr
+  }
+  .crate strong {
+    font-size:17px
+  }
+  .hero-actions {
+    align-items:stretch
+  }
+  .hero-actions .btn {
+    width:100%
+  }
+  .hero-desc {
+    max-width:325px
+  }
+}
+@media print {
+  body:before,body:after,header,.topline,.hero-scene,.scrollcue,.viewfinder,.filters,.searchrow,.mapboard,.hero-side,.btn,.modal,.dropoverlay,.footer .right,.privacy,.hero-vertical {
+    display:none!important
+  }
+  body {
+    color:#151a14;
+    background:#fff!important
+  }
+  .hero {
+    height:auto;
+    min-height:auto;
+    color:#111;
+    background:white
+  }
+  .hero:before,.hero:after {
+    display:none
+  }
+  .hero .hero-copy {
+    padding:35px 0
+  }
+  .hero-name .outline {
+    -webkit-text-stroke:0;
+    color:#111
+  }
+  .hero-name .yellow {
+    color:#111;
+    text-shadow:none
+  }
+  .section {
+    padding:30px 25px!important;
+    background:#fff!important;
+    break-inside:avoid
+  }
+  .sectionhead h2 {
+    font-size:48px
+  }
+  .missionlist {
+    grid-template-columns:repeat(3,1fr)!important
+  }
+  .warroom {
+    display:block
+  }
+  .mission,.introcard,.slot,.itemdetail,.intel-feature,.intel-small,.crate {
+    background:white!important;
+    color:#111!important;
+    box-shadow:none;
+    break-inside:avoid
+  }
+  .mission p,.mission h3,.sectionhead p,.itemtext p,.timeunit p,.introcard blockquote,.intel-feature p,.intel-small p,.crate em {
+    color:#333!important
+  }
+  .modal {
+    display:none
+  }
+  .hero-desc,.hero-role p {
+    color:#333
+  }
+  .status-ribbon,.exit {
+    background:#fff;
+    color:#111
+  }
+  .section-no {
+    display:none
+  }
+  .crates {
+    grid-template-columns:repeat(4,1fr)
+  }
+}

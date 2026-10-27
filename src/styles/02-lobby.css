@@ -1,0 +1,307 @@
+/* HERO */
+.hero {
+  min-height:790px;
+  height:calc(100vh - 103px);
+  max-height:970px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:#141d17;
+  isolation:isolate
+}
+.hero:before {
+  content:"";
+  position:absolute;
+  z-index:3;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(9,14,11,.99) 0%,rgba(9,14,11,.94) 27%,rgba(9,14,11,.55) 53%,rgba(9,14,11,.03) 82%),linear-gradient(0deg,rgba(8,12,9,.98),transparent 30%),radial-gradient(ellipse at 65% 40%,transparent 10%,rgba(10,17,13,.45) 90%)
+}
+.hero:after {
+  content:"";
+  position:absolute;
+  z-index:3;
+  inset:0;
+  pointer-events:none;
+  background:repeating-linear-gradient(90deg,transparent 0 170px,rgba(242,236,211,.055) 171px,transparent 172px);
+  opacity:.5
+}
+.hero-scene {
+  position:absolute;
+  inset:0;
+  z-index:1;
+  filter:var(--hero-filter);
+  transform:scale(1.03);
+  transition:transform 1s ease,filter .4s
+}
+.hero:hover .hero-scene {
+  transform:scale(1.06)
+}
+.hero-scene svg {
+  width:100%;
+  height:100%;
+  display:block
+}
+.hero-inner {
+  position:relative;
+  z-index:7;
+  width:100%;
+  max-width:1540px;
+  margin:auto;
+  padding:0 4vw;
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(340px,.65fr);
+  align-items:center;
+  gap:50px
+}
+.hero-copy {
+  padding:30px 0 80px;
+  max-width:880px
+}
+.missionlabel {
+  display:inline-flex;
+  gap:14px;
+  align-items:center;
+  border:1px solid #6e7250;
+  background:rgba(27,37,25,.6);
+  padding:9px 15px 9px 11px;
+  margin-bottom:23px;
+  font:700 11px 'Courier New',monospace;
+  letter-spacing:.18em;
+  text-transform:uppercase
+}
+.missionlabel b {
+  background:var(--amber);
+  color:#171711;
+  padding:5px 8px;
+  font-size:10px
+}
+.hero .eyebrow {
+  display:block;
+  margin:0 0 18px
+}
+.hero-name {
+  font-size:clamp(88px,10.4vw,178px);
+  margin:0;
+  line-height:.79;
+  letter-spacing:-.018em;
+  text-shadow:0 5px 0 #1d2317,8px 13px 0 rgba(0,0,0,.3)
+}
+.hero-name span {
+  display:block
+}
+.hero-name .outline {
+  -webkit-text-stroke:2px var(--white);
+  color:transparent
+}
+.hero-name .yellow {
+  color:var(--amber);
+  text-shadow:0 5px 0 #8b541c,8px 13px 0 rgba(0,0,0,.4)
+}
+.hero-role {
+  display:flex;
+  gap:17px;
+  align-items:center;
+  margin:25px 0 13px
+}
+.hero-role .dash {
+  height:4px;
+  width:39px;
+  background:var(--orange)
+}
+.hero-role p {
+  font:900 clamp(18px,2vw,29px) 'Arial Narrow',Arial,sans-serif;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  margin:0;
+  max-width:590px
+}
+.hero-desc {
+  max-width:520px;
+  color:#c4cbbd;
+  font-size:15px;
+  line-height:1.9;
+  margin:16px 0 30px
+}
+.hero-actions {
+  display:flex;
+  gap:16px;
+  align-items:center;
+  flex-wrap:wrap
+}
+.hero-meta {
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
+  margin-top:32px;
+  color:#c5cbbc;
+  font:10px 'Courier New',monospace;
+  letter-spacing:.06em
+}
+.hero-meta span {
+  padding-right:20px;
+  border-right:1px solid #5f6c59
+}
+.hero-meta b {
+  color:var(--amber)
+}
+.hero-side {
+  align-self:end;
+  justify-self:end;
+  margin-bottom:90px;
+  max-width:370px;
+  width:100%;
+  position:relative
+}
+.operator-card {
+  background:rgba(11,18,14,.68);
+  border:1px solid #6b785f;
+  backdrop-filter:blur(7px);
+  padding:20px 22px 16px;
+  box-shadow:10px 13px 0 rgba(0,0,0,.24);
+  transform:rotate(-2deg)
+}
+.operator-card .top {
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  align-items:center;
+  font:10px 'Courier New',monospace;
+  color:var(--amber);
+  letter-spacing:.12em
+}
+.operator-card .face {
+  font:900 35px Impact,Arial,sans-serif;
+  letter-spacing:.06em;
+  margin:15px 0 5px
+}
+.operator-card .designation {
+  color:#b4c1ad;
+  font:11px 'Courier New',monospace;
+  line-height:1.8
+}
+.operator-card .barcode {
+  height:35px;
+  margin-top:15px;
+  background:repeating-linear-gradient(90deg,#d9d6c7 0 2px,transparent 2px 4px,#d9d6c7 4px 5px,transparent 5px 11px,#d9d6c7 11px 16px,transparent 16px 21px);
+  opacity:.55;
+  width:100%
+}
+.operator-card .foot {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:10px;
+  font:10px 'Courier New',monospace;
+  color:#b5c3a8
+}
+.operator-card .foot em {
+  color:var(--amber);
+  font-style:normal
+}
+.viewfinder {
+  position:absolute;
+  z-index:4;
+  width:72px;
+  height:72px;
+  border:1px solid rgba(246,240,212,.25);
+  border-radius:50%;
+  top:30%;
+  right:21%;
+  pointer-events:none;
+  animation:float 4s ease-in-out infinite
+}
+.viewfinder:before,.viewfinder:after {
+  content:"";
+  position:absolute;
+  background:rgba(247,242,226,.42)
+}
+.viewfinder:before {
+  height:1px;
+  width:120px;
+  top:35px;
+  left:-24px
+}
+.viewfinder:after {
+  height:120px;
+  width:1px;
+  left:35px;
+  top:-24px
+}
+@keyframes float {
+  50% {
+    transform:translateY(-11px)
+  }
+}
+.hero-vertical {
+  position:absolute;
+  right:23px;
+  top:90px;
+  z-index:8;
+  writing-mode:vertical-rl;
+  color:rgba(255,255,255,.5);
+  font:11px 'Courier New',monospace;
+  letter-spacing:.3em
+}
+.hero-coordinate {
+  position:absolute;
+  bottom:26px;
+  left:4vw;
+  z-index:8;
+  color:#a4b09d;
+  font:11px 'Courier New',monospace
+}
+.scrollcue {
+  position:absolute;
+  bottom:22px;
+  right:4vw;
+  z-index:8;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#c2ceb9;
+  font:11px 'Courier New',monospace;
+  letter-spacing:.15em
+}
+.scrollcue i {
+  display:block;
+  height:32px;
+  width:1px;
+  background:var(--amber);
+  animation:scroll 1.4s infinite
+}
+@keyframes scroll {
+  50% {
+    height:16px;
+    opacity:.3
+  }
+}
+.status-ribbon {
+  display:grid;
+  grid-template-columns:1.15fr 1fr 1fr 1.05fr;
+  background:#1a2119;
+  border-top:2px solid var(--amber);
+  border-bottom:1px solid #56604c
+}
+.status-ribbon .stat {
+  padding:24px 3vw;
+  border-right:1px solid #394538
+}
+.stat small {
+  display:block;
+  color:#939f88;
+  font:10px 'Courier New',monospace;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  margin-bottom:5px
+}
+.stat strong {
+  display:block;
+  font:900 clamp(18px,2vw,27px) Impact,Arial,sans-serif;
+  letter-spacing:.04em;
+  text-transform:uppercase
+}
+.stat strong span {
+  color:var(--amber)
+}

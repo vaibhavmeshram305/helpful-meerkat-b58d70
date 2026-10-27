@@ -1,0 +1,133 @@
+/* Navigation */
+.topline {
+  height:29px;
+  background:#131a13;
+  border-bottom:1px solid #374434;
+  color:#c6ccba;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 4vw;
+  font:10px 'Courier New',monospace;
+  letter-spacing:.12em;
+  text-transform:uppercase
+}
+.topline b {
+  color:var(--amber)
+}
+.pulse {
+  display:inline-block;
+  width:6px;
+  height:6px;
+  background:#a4ed85;
+  border-radius:50%;
+  margin-right:8px;
+  box-shadow:0 0 0 5px rgba(164,237,133,.1);
+  animation:pulse 2.1s infinite
+}
+@keyframes pulse {
+  50% {
+    box-shadow:0 0 0 9px rgba(164,237,133,0)
+  }
+}
+header {
+  position:sticky;
+  top:0;
+  z-index:55;
+  background:rgba(11,16,13,.95);
+  border-bottom:1px solid #455144;
+  backdrop-filter:blur(18px)
+}
+.nav {
+  max-width:1540px;
+  margin:auto;
+  min-height:74px;
+  padding:0 4vw;
+  display:flex;
+  align-items:center;
+  gap:32px
+}
+.brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-shrink:0
+}
+.brandmark {
+  width:44px;
+  height:44px;
+  border:2px solid var(--amber);
+  display:grid;
+  place-items:center;
+  transform:rotate(45deg);
+  color:var(--amber);
+  box-shadow:inset 0 0 0 3px #121813
+}
+.brandmark strong {
+  transform:rotate(-45deg);
+  font:900 22px Impact,Arial,sans-serif
+}
+.brandname {
+  font:800 19px Impact,Arial,sans-serif;
+  letter-spacing:.075em;
+  line-height:1.1
+}
+.brandname small {
+  display:block;
+  margin-top:5px;
+  color:var(--muted);
+  font:9px 'Courier New',monospace;
+  letter-spacing:.14em
+}
+.navlinks {
+  display:flex;
+  align-items:center;
+  gap:26px;
+  margin-left:auto
+}
+.navlinks a {
+  font:700 11px 'Courier New',monospace;
+  letter-spacing:.1em;
+  color:#afb4aa;
+  transition:color .2s
+}
+.navlinks a:hover,.navlinks a.active {
+  color:var(--amber)
+}
+.navtools {
+  display:flex;
+  gap:8px;
+  align-items:center
+}
+.iconbutton {
+  width:39px;
+  height:39px;
+  display:grid;
+  place-items:center;
+  background:#1c251d;
+  border:1px solid #485749;
+  color:var(--amber);
+  font-size:18px
+}
+.iconbutton:hover {
+  background:#293528
+}
+.privacy {
+  font:10px 'Courier New',monospace;
+  letter-spacing:.05em;
+  color:#c1d5b4;
+  display:flex;
+  align-items:center;
+  gap:7px
+}
+.navtools .btn {
+  min-height:37px;
+  font-size:10px;
+  padding:8px 16px
+}
+.hamburger {
+  display:none
+}
+.mobilemenu {
+  display:none
+}
